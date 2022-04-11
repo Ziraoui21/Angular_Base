@@ -1,1 +1,6 @@
 <p>child-component works!</p>
+
+<h1>{{parentData}}</h1>
+
+<input #valueData type="text">
+<button (click)="sendData(valueData.value)">Send data to Parent</button>

@@ -1,1 +1,4 @@
 <p>component-interaction-test works!</p>
+<h1>{{messageData}}</h1>
+
+<app-child-component (childEvent)="setMessageData($event)"[parentData]="parent"></app-child-component>

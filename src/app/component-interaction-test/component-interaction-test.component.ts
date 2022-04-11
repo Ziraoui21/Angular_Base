@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ComponentInteractionTestComponent implements OnInit {
 
+  parent:string = "Hello iam from parent";
+  messageData = "";
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  setMessageData(data:string):void {
+    this.messageData = data;
+  }
 }
