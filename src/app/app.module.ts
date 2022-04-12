@@ -11,6 +11,7 @@ import { StyleBindingTestComponent } from './style-binding-test/style-binding-te
 import { DataBindingEventsTestComponent } from './data-binding-events-test/data-binding-events-test.component';
 import { ComponentInteractionTestComponent } from './component-interaction-test/component-interaction-test.component';
 import { ChildComponentComponent } from './child-component/child-component.component';
+import { PipesTestingComponent } from './pipes-testing/pipes-testing.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { ChildComponentComponent } from './child-component/child-component.compo
     StyleBindingTestComponent,
     DataBindingEventsTestComponent,
     ComponentInteractionTestComponent,
-    ChildComponentComponent
+    ChildComponentComponent,
+    PipesTestingComponent
   ],
   imports: [
     BrowserModule,
@@ -30,6 +32,6 @@ import { ChildComponentComponent } from './child-component/child-component.compo
     FormsModule
   ],
   providers: [],
-  bootstrap: [ComponentInteractionTestComponent]
+  bootstrap: [PipesTestingComponent]
 })
 export class AppModule { }

@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ComponentInteractionTestComponent implements OnInit {
 
-  parent:string = "Hello iam from parent";
+  parent:string = "Hello i am from parent";
   messageData = "";
 
   constructor() { }
