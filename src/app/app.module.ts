@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,6 +13,10 @@ import { DataBindingEventsTestComponent } from './data-binding-events-test/data-
 import { ComponentInteractionTestComponent } from './component-interaction-test/component-interaction-test.component';
 import { ChildComponentComponent } from './child-component/child-component.component';
 import { PipesTestingComponent } from './pipes-testing/pipes-testing.component';
+import { ServiceTestComponent } from './service-test/service-test.component';
+import { DataCenterService } from './data-center.service';
+import { HttpTestComponent } from './http-test/http-test.component';
+import { HttpServiceService } from './http-service.service';
 
 
 @NgModule({
@@ -24,14 +29,20 @@ import { PipesTestingComponent } from './pipes-testing/pipes-testing.component';
     DataBindingEventsTestComponent,
     ComponentInteractionTestComponent,
     ChildComponentComponent,
-    PipesTestingComponent
+    PipesTestingComponent,
+    ServiceTestComponent,
+    HttpTestComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [],
-  bootstrap: [PipesTestingComponent]
+  providers: [
+    DataCenterService,
+    HttpServiceService
+  ],
+  bootstrap: [HttpTestComponent]
 })
 export class AppModule { }
